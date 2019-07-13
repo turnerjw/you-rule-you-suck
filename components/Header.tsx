@@ -1,6 +1,5 @@
 import * as React from "react";
 import styled from "styled-components";
-import {} from "styled-system";
 
 export const BoardHeader = styled.h1<{ content: string }>`
     font-size: 11vw;
