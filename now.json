@@ -1,0 +1,1 @@
+{"version":2,"name":"you-rule-you-suck","builds":[{"src":"package.json","use":"@now/next"}]}
