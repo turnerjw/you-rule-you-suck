@@ -4,6 +4,8 @@ import styled from "styled-components";
 export const BoardHeader = styled.h1<{ content: string }>`
     font-size: 11vw;
     margin: 0;
+    user-select: none;
+    cursor: pointer;
     ::before {
         content: "${props => props.content}";
         position: absolute;

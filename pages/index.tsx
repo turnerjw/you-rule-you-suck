@@ -12,10 +12,17 @@ const Home: NextPage<{ userAgent: string }> = ({ userAgent }) => {
                 />
                 <style>
                     {`
-                  body {
-                    font-family: 'Neucha', cursive;
-                    background-color: #fffff6;
-                  }
+                    html, body 
+                    {
+                      margin:0;
+                      padding:0;
+                      height:100%;
+                      border:none
+                    }
+                    body {
+                      font-family: 'Neucha', cursive;
+                      background-color: #fffff6;
+                    }
                   `}
                 </style>
             </Head>
