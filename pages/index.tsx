@@ -4,7 +4,7 @@ import { YouRuleYouSuck } from "../components/YouRuleYouSuck";
 
 const Home: NextPage<{ userAgent: string }> = ({ userAgent }) => {
     return (
-        <div>
+        <div style={{ height: "100vh" }}>
             <Head>
                 <link
                     href="https://fonts.googleapis.com/css?family=Neucha&display=swap"
