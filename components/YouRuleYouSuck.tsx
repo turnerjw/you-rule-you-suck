@@ -43,7 +43,7 @@ export const YouRuleYouSuck: React.FunctionComponent = () => {
                     </th>
                 </thead>
                 <tbody style={{ height: "40vw" }}>
-                    <tr>
+                    <tr style={{ height: "40vw" }}>
                         <td
                             onClick={incrementYouRule}
                             style={{
