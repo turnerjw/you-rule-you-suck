@@ -49,7 +49,8 @@ export const YouRuleYouSuck: React.FunctionComponent = () => {
                                 borderRadius: "0% 1% 1% 55% / 0% 65% 26% 3%",
                                 cursor: "pointer",
                                 verticalAlign: "top",
-                                minHeight: "15vw"
+                                minHeight: "15vw",
+                                padding: "40px"
                             }}
                         >
                             <TallyCounter count={youRuleCount} />
@@ -59,7 +60,8 @@ export const YouRuleYouSuck: React.FunctionComponent = () => {
                             style={{
                                 cursor: "pointer",
                                 verticalAlign: "top",
-                                minHeight: "15vw"
+                                minHeight: "15vw",
+                                padding: "40px"
                             }}
                         >
                             <TallyCounter count={youSuckCount} />
