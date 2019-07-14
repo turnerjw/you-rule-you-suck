@@ -11,6 +11,7 @@ const TallyMarks = styled.ul`
     display: inline-block;
     padding: 0;
     margin: 0 -25px 30px 0;
+    user-select: none;
     li {
         display: inline-block;
         height: 15vw;
