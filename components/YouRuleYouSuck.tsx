@@ -16,7 +16,9 @@ export const YouRuleYouSuck: React.FunctionComponent = () => {
 
     return (
         <div style={{ height: "100%" }}>
-            <table style={{ width: "100%", borderSpacing: 0 }}>
+            <table
+                style={{ width: "100%", borderSpacing: 0, userSelect: "none" }}
+            >
                 <thead>
                     <th
                         onClick={incrementYouRule}
