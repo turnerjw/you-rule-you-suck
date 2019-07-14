@@ -18,6 +18,17 @@ const EraseButton = styled(motion.button)`
     border-radius: 20px;
 `;
 
+const Table = styled.table`
+    user-select: none;
+    width: 100%;
+    border-spacing: 0;
+`;
+
+const Layout = styled.div`
+    height: 100%;
+    user-select: none;
+`;
+
 export const YouRuleYouSuck: React.FunctionComponent = () => {
     const [youRuleCount, setYouRuleCount] = React.useState(0);
     const [youSuckCount, setYouSuckCount] = React.useState(0);
@@ -31,10 +42,8 @@ export const YouRuleYouSuck: React.FunctionComponent = () => {
     };
 
     return (
-        <div style={{ height: "100%" }}>
-            <table
-                style={{ width: "100%", borderSpacing: 0, userSelect: "none" }}
-            >
+        <Layout>
+            <Table>
                 <thead>
                     <tr>
                         <th
@@ -88,7 +97,7 @@ export const YouRuleYouSuck: React.FunctionComponent = () => {
                         </td>
                     </tr>
                 </tbody>
-            </table>
+            </Table>
             <EraseButton
                 onClick={() => {
                     setYouRuleCount(0);
@@ -103,6 +112,6 @@ export const YouRuleYouSuck: React.FunctionComponent = () => {
             >
                 Erase Board
             </EraseButton>
-        </div>
+        </Layout>
     );
 };
