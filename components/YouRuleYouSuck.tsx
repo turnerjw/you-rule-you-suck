@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion";
+import { motion, MotionProps } from "framer-motion";
 import { Header } from "./Header";
 import { TallyCounter } from "./TallyCounter";
 
@@ -28,6 +28,12 @@ const Layout = styled.div`
     height: 100%;
     user-select: none;
 `;
+
+export const spring: MotionProps["transition"] = {
+    type: "spring",
+    stiffness: 1000,
+    damping: 40
+};
 
 export const YouRuleYouSuck: React.FunctionComponent = () => {
     const [youRuleCount, setYouRuleCount] = React.useState(0);
@@ -99,6 +105,7 @@ export const YouRuleYouSuck: React.FunctionComponent = () => {
                 </tbody>
             </Table>
             <EraseButton
+                transition={spring}
                 onClick={() => {
                     setYouRuleCount(0);
                     setYouSuckCount(0);
