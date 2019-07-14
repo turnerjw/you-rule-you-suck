@@ -36,27 +36,29 @@ export const YouRuleYouSuck: React.FunctionComponent = () => {
                 style={{ width: "100%", borderSpacing: 0, userSelect: "none" }}
             >
                 <thead>
-                    <th
-                        onClick={incrementYouRule}
-                        style={{
-                            borderRight: "1vw solid black",
-                            borderBottom: "1vw solid black",
-                            borderRadius: "0% 1% 21% 44% / 0% 65% 3% 3%",
-                            width: "50%"
-                        }}
-                    >
-                        <Header text="YOU RULE" />
-                    </th>
-                    <th
-                        onClick={incrementYouSuck}
-                        style={{
-                            borderBottom: "1vw solid black",
-                            borderRadius: "0% 1% 21% 55% / 0% 65% 2% 3%",
-                            width: "50%"
-                        }}
-                    >
-                        <Header text="YOU SUCK" />
-                    </th>
+                    <tr>
+                        <th
+                            onClick={incrementYouRule}
+                            style={{
+                                borderRight: "1vw solid black",
+                                borderBottom: "1vw solid black",
+                                borderRadius: "0% 1% 21% 44% / 0% 65% 3% 3%",
+                                width: "50%"
+                            }}
+                        >
+                            <Header text="YOU RULE" />
+                        </th>
+                        <th
+                            onClick={incrementYouSuck}
+                            style={{
+                                borderBottom: "1vw solid black",
+                                borderRadius: "0% 1% 21% 55% / 0% 65% 2% 3%",
+                                width: "50%"
+                            }}
+                        >
+                            <Header text="YOU SUCK" />
+                        </th>
+                    </tr>
                 </thead>
                 <tbody style={{ height: "40vw" }}>
                     <tr style={{ height: "40vw" }}>
@@ -92,10 +94,9 @@ export const YouRuleYouSuck: React.FunctionComponent = () => {
                     setYouRuleCount(0);
                     setYouSuckCount(0);
                 }}
-                //initial={{ boxShadow: "rgba(0, 0, 0, 0) 0px 10px 20px" }}
+                initial={{ color: "black" }}
                 whileHover={{
                     translateY: "-3px",
-                    border: "none",
                     boxShadow: "rgba(0, 0, 0, 0.25) 0px 10px 20px"
                 }}
                 whileTap={{ scale: 0.9 }}

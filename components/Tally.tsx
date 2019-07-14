@@ -38,6 +38,7 @@ export const Tally: React.FunctionComponent<TallyProps> = ({ count }) => {
             if (index % 5 === 4) {
                 tally.push(
                     <motion.li
+                        key={index}
                         initial={{ scaleY: 0, scaleX: 0, rotate: "300deg" }}
                         animate={{ scaleY: 1, scaleX: 1, rotate: "300deg" }}
                     />
@@ -45,6 +46,7 @@ export const Tally: React.FunctionComponent<TallyProps> = ({ count }) => {
             } else {
                 tally.push(
                     <motion.li
+                        key={index}
                         initial={{ scaleY: 0 }}
                         animate={{ scaleY: 1 }}
                     />

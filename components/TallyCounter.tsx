@@ -16,10 +16,10 @@ export const TallyCounter: React.FunctionComponent<TallyCounterProps> = ({
         const remainder = count % 5;
 
         for (let index = 0; index < fullCounts; index++) {
-            tallies.push(<Tally count={5} />);
+            tallies.push(<Tally count={5} key={index} />);
         }
 
-        tallies.push(<Tally count={remainder} />);
+        tallies.push(<Tally key={fullCounts} count={remainder} />);
 
         return tallies;
     };
