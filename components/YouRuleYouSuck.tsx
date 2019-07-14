@@ -1,6 +1,22 @@
 import * as React from "react";
+import styled from "styled-components";
+import { motion } from "framer-motion";
 import { Header } from "./Header";
 import { TallyCounter } from "./TallyCounter";
+
+const EraseButton = styled(motion.button)`
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    border: none;
+    background-color: transparent;
+    font-size: 25px;
+    font-family: inherit;
+    cursor: pointer;
+    padding: 20px 15px 15px 18px;
+    line-height: 15px;
+    border-radius: 20px;
+`;
 
 export const YouRuleYouSuck: React.FunctionComponent = () => {
     const [youRuleCount, setYouRuleCount] = React.useState(0);
@@ -71,6 +87,21 @@ export const YouRuleYouSuck: React.FunctionComponent = () => {
                     </tr>
                 </tbody>
             </table>
+            <EraseButton
+                onClick={() => {
+                    setYouRuleCount(0);
+                    setYouSuckCount(0);
+                }}
+                //initial={{ boxShadow: "rgba(0, 0, 0, 0) 0px 10px 20px" }}
+                whileHover={{
+                    translateY: "-3px",
+                    border: "none",
+                    boxShadow: "rgba(0, 0, 0, 0.25) 0px 10px 20px"
+                }}
+                whileTap={{ scale: 0.9 }}
+            >
+                Erase Board
+            </EraseButton>
         </div>
     );
 };
