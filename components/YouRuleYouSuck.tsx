@@ -1,36 +1,6 @@
 import * as React from "react";
 import { Header } from "./Header";
 import { TallyCounter } from "./TallyCounter";
-import styled from "styled-components";
-
-const Grid = styled.div`
-    display: grid;
-`;
-
-const Board = styled.div`
-    display: flex;
-    width: 100vw;
-    justify-content: space-around;
-`;
-
-const Column = styled.div`
-    display: flex;
-    flex-direction: column;
-`;
-
-const VLine = styled.div`
-    width: 1vw;
-    background-color: black;
-    align-self: stretch;
-    border-radius: 23% 42% 41% 16% / 47% 16% 65% 21%;
-`;
-
-const HLine = styled.div`
-    height: 1vw;
-    background-color: black;
-    align-self: stretch;
-    border-radius: 23% 42% 41% 16% / 47% 16% 65% 21%;
-`;
 
 export const YouRuleYouSuck: React.FunctionComponent = () => {
     const [youRuleCount, setYouRuleCount] = React.useState(0);
@@ -46,17 +16,6 @@ export const YouRuleYouSuck: React.FunctionComponent = () => {
 
     return (
         <div style={{ height: "100%" }}>
-            {/* <Board>
-                <Column>
-                    <Header text="YOU RULE" />
-                    <HLine />
-                </Column>
-                <VLine />
-                <Column>
-                    <Header text="YOU SUCK" />
-                    <HLine />
-                </Column>
-            </Board> */}
             <table style={{ width: "100%", borderSpacing: 0 }}>
                 <thead>
                     <th
