@@ -5,11 +5,11 @@ import { Header } from "./Header";
 import { TallyCounter } from "./TallyCounter";
 
 const EraseButton = styled(motion.button)`
-    position: absolute;
+    position: fixed;
     right: 25px;
     bottom: 25px;
     border: none;
-    background-color: transparent;
+    background-color: #fffff6;
     font-size: 25px;
     font-family: inherit;
     cursor: pointer;
@@ -103,10 +103,13 @@ export const YouRuleYouSuck: React.FunctionComponent = () => {
                     setYouRuleCount(0);
                     setYouSuckCount(0);
                 }}
-                initial={{ color: "black" }}
+                initial={{
+                    color: "black",
+                    boxShadow: "rgba(0, 0, 0, 0.25) 0px 5px 20px -7px"
+                }}
                 whileHover={{
                     translateY: "-3px",
-                    boxShadow: "rgba(0, 0, 0, 0.25) 0px 10px 20px"
+                    boxShadow: "rgba(0, 0, 0, 0.25) 0px 10px 20px 0px"
                 }}
                 whileTap={{ scale: 0.9 }}
             >
