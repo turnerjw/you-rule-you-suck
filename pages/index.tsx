@@ -22,6 +22,7 @@ const Home: NextPage<{ userAgent: string }> = ({ userAgent }) => {
                     body {
                       font-family: 'Neucha', cursive;
                       background-color: #fffff6;
+                      font-display: auto;
                     }
                   `}
                 </style>
