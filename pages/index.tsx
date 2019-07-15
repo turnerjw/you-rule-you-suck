@@ -11,6 +11,7 @@ const Home: NextPage<{ userAgent: string }> = ({ userAgent }) => {
                     rel="stylesheet"
                 />
                 <link rel="manifest" href="/static/manifest.json" />
+                <meta name="theme-color" content="#505050" />
                 <style>
                     {`
                     html, body 
