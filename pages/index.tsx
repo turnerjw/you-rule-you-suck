@@ -11,6 +11,10 @@ const Home: NextPage<{ userAgent: string }> = ({ userAgent }) => {
                     rel="stylesheet"
                 />
                 <link rel="manifest" href="/static/manifest.json" />
+                <link
+                    rel="apple-touch-icon"
+                    href="static/images/icons/icon-512x512.png"
+                />
                 <meta name="theme-color" content="#505050" />
                 <style>
                     {`
