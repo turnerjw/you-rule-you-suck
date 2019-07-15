@@ -16,6 +16,11 @@ const Home: NextPage<{ userAgent: string }> = ({ userAgent }) => {
                     href="static/images/icons/icon-512x512.png"
                 />
                 <meta name="theme-color" content="#505050" />
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+                />
+                <meta name="HandheldFriendly" content="true" />
                 <style>
                     {`
                     html, body 
