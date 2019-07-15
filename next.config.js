@@ -1,3 +1,5 @@
-module.exports = {
-  target: 'serverless'
-}
+const withOffline = require("next-offline");
+
+module.exports = withOffline({
+    target: "serverless"
+});
