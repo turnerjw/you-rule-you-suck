@@ -10,6 +10,7 @@ const Home: NextPage<{ userAgent: string }> = ({ userAgent }) => {
                     href="https://fonts.googleapis.com/css?family=Neucha&display=swap"
                     rel="stylesheet"
                 />
+                <link rel="manifest" href="/static/manifest.json" />
                 <style>
                     {`
                     html, body 
