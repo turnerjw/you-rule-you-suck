@@ -1,10 +1,11 @@
 import * as React from "react";
+import { useEffect } from "react";
 import { useRouter } from "next/router";
 import styled from "styled-components";
-import { motion, MotionProps } from "framer-motion";
+import { motion } from "framer-motion";
 import { Header } from "./Header";
 import { TallyCounter } from "./TallyCounter";
-import { useEffect } from "react";
+import { Share } from "./Share";
 
 const EraseButton = styled(motion.button)`
     position: fixed;
@@ -30,12 +31,6 @@ const Layout = styled.div`
     height: 100%;
     user-select: none;
 `;
-
-export const spring: MotionProps["transition"] = {
-    type: "spring",
-    stiffness: 1000,
-    damping: 40
-};
 
 export const YouRuleYouSuck: React.FunctionComponent = () => {
     const router = useRouter();
@@ -115,7 +110,6 @@ export const YouRuleYouSuck: React.FunctionComponent = () => {
                 </tbody>
             </Table>
             <EraseButton
-                transition={spring}
                 onClick={() => {
                     setYouRuleCount(0);
                     setYouSuckCount(0);
@@ -132,6 +126,7 @@ export const YouRuleYouSuck: React.FunctionComponent = () => {
             >
                 Erase Board
             </EraseButton>
+            <Share ruleCount={youRuleCount} suckCount={youSuckCount} />
         </Layout>
     );
 };
