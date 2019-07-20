@@ -1,8 +1,10 @@
 import * as React from "react";
+import { useRouter } from "next/router";
 import styled from "styled-components";
 import { motion, MotionProps } from "framer-motion";
 import { Header } from "./Header";
 import { TallyCounter } from "./TallyCounter";
+import { useEffect } from "react";
 
 const EraseButton = styled(motion.button)`
     position: fixed;
@@ -36,8 +38,16 @@ export const spring: MotionProps["transition"] = {
 };
 
 export const YouRuleYouSuck: React.FunctionComponent = () => {
-    const [youRuleCount, setYouRuleCount] = React.useState(0);
-    const [youSuckCount, setYouSuckCount] = React.useState(0);
+    const router = useRouter();
+    const { r: initialRuleCount, s: initialSuckCount } = router.query;
+
+    const [youRuleCount, setYouRuleCount] = React.useState<number>(0);
+    const [youSuckCount, setYouSuckCount] = React.useState<number>(0);
+
+    useEffect(() => {
+        initialRuleCount && setYouRuleCount(+initialRuleCount);
+        initialSuckCount && setYouSuckCount(+initialSuckCount);
+    }, [initialRuleCount, initialSuckCount]);
 
     const incrementYouRule = () => {
         setYouRuleCount(youRuleCount + 1);
