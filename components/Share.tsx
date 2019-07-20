@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import { writeText } from "clipboard-polyfill";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Button = styled(motion.button)`
@@ -40,26 +41,24 @@ export const Share: React.FunctionComponent<ShareProps> = ({
     const [isVisible, setIsVisible] = React.useState(false);
 
     const handleClick = () => {
-        navigator.clipboard
-            .writeText(
-                `robins-whiteboard.jstntrnr.com/?r=${ruleCount}&s=${suckCount}`
-            )
-            .then(
-                function() {
-                    setText("Link Copied");
-                    setIsVisible(true);
-                    setTimeout(() => {
-                        setIsVisible(false);
-                    }, 3000);
-                },
-                function() {
-                    setText("Failed to copy link");
-                    setIsVisible(true);
-                    setTimeout(() => {
-                        setIsVisible(false);
-                    }, 3000);
-                }
-            );
+        writeText(
+            `robins-whiteboard.jstntrnr.com/?r=${ruleCount}&s=${suckCount}`
+        ).then(
+            function() {
+                setText("Link Copied");
+                setIsVisible(true);
+                setTimeout(() => {
+                    setIsVisible(false);
+                }, 3000);
+            },
+            function() {
+                setText("Failed to copy link");
+                setIsVisible(true);
+                setTimeout(() => {
+                    setIsVisible(false);
+                }, 3000);
+            }
+        );
     };
 
     return (
