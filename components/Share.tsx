@@ -4,6 +4,7 @@ import { writeText } from "clipboard-polyfill";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Button = styled(motion.button)`
+    z-index: 1;
     border: none;
     background-color: #fffff6;
     font-size: 25px;
@@ -15,6 +16,7 @@ const Button = styled(motion.button)`
 `;
 
 const Message = styled(motion.p)`
+    z-index: -1;
     font-size: 25px;
     line-height: 15px;
 `;
