@@ -42,7 +42,7 @@ export const Share: React.FunctionComponent<ShareProps> = ({
     const handleClick = () => {
         navigator.clipboard
             .writeText(
-                `robins.whiteboard.jstntrnr.com/?r=${ruleCount}&s=${suckCount}`
+                `robins-whiteboard.jstntrnr.com/?r=${ruleCount}&s=${suckCount}`
             )
             .then(
                 function() {
